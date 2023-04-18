@@ -2,7 +2,7 @@ import inspect
 
 def get_docstring(obj):
     """Return the docstring for an object, or None if no docstring is found."""
-    docstring = inspect.getdoc(obj)
+    docstring = obj.__doc__
     if docstring is None:
         docstring = inspect.getcomments(obj)
     return docstring

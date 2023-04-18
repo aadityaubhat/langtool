@@ -1,4 +1,4 @@
-from toolify.utils import get_docstring, get_members
+from langtool.utils import get_docstring, get_members
 
 def test_get_docstring():
     """Test that get_docstring returns the docstring for an object."""

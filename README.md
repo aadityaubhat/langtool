@@ -40,11 +40,11 @@ pip install langtool
 
 ## 📍 Roadmap
 
-[] Support creating LangChain tools
-[] Support Python modules as tools
-[] Support external APIs as tools
-[] Support Toolkits consisting of multiple tools
-[] Support other LLMs
+- [ ] Support creating LangChain tools
+- [ ] Support Python modules as tools
+- [ ] Support external APIs as tools
+- [ ] Support Toolkits consisting of multiple tools
+- [ ] Support other LLMs
 
 ## ✨ Contributing
 

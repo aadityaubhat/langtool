@@ -2,8 +2,8 @@ import jinja2
 
 environment = jinja2.Environment()
 
-system_start_prompt = (
-    "You are a helpful assistant that converts instructions into python code"
+system_prompt = (
+    "You are a helpful assistant that only writes python code to follow instructions. Don't write anything other than code and comments."
 )
 
 tool_prompt = environment.from_string(

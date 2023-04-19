@@ -1,6 +1,7 @@
 from langtool.llms.base import LLM
 import openai
 import enum
+from langtool.prompts import system_prompt
 
 
 class Model(enum.Enum):
@@ -17,7 +18,7 @@ class Openai(LLM):
         self,
         api_key: str,
         model: Model,
-        system_prompt: str,
+        system_prompt: str = system_prompt,
         temperature: float = 0.1,
         frequency_penalty: float = 0,
     ):

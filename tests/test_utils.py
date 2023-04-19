@@ -50,8 +50,8 @@ def test_get_class_documentation():
         "This is a sample TestClass for testing documentation functions." in class_doc
     )
     assert "Methods:" in class_doc
-    assert "Function: method_one" in class_doc
-    assert "Function: method_two" in class_doc
+    assert "method_one" in class_doc
+    assert "method_two" in class_doc
 
 
 def test_get_function_documentation():

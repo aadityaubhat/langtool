@@ -3,8 +3,8 @@ from abc import (
     ABC,
 )
 
-class LLM(ABC):
 
+class LLM(ABC):
     @abstractmethod
     def get_reply(self, message, **kwargs):
         pass

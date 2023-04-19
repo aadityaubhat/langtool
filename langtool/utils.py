@@ -73,8 +73,7 @@ def get_class_documentation(cls):
 
     documentation += "\nMethods:\n"
     for name, member in class_members:
-        method_doc = get_function_documentation(member)
-        documentation += "\n{}\n".format(method_doc)
+        documentation += "{}\n".format(name)
 
     return documentation
 

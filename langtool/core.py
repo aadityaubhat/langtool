@@ -6,11 +6,14 @@ import logging
 
 logger = logging.getLogger(__name__)
 
+
 class Toolify:
-    def __init__(self, obj:object, llm: LLM):
+    def __init__(self, obj: object, llm: LLM):
         if not isfunction(obj) and not isclass(obj):
-            raise TypeError("Expected a function or class object, received: {}".format(type(obj)))
-        
+            raise TypeError(
+                "Expected a function or class object, received: {}".format(type(obj))
+            )
+
         self.obj = obj
         self.llm = llm
 
@@ -25,10 +28,10 @@ class Toolify:
         """
         description = get_documentation(self.obj)
         name = self.obj.__name__
-        obj_type = 'function' if isfunction(self.obj) else 'class'
+        obj_type = "function" if isfunction(self.obj) else "class"
         prompt = render_tool_prompt(name, obj_type, description, instruction)
         logger.info("Prompt: \n {}".format(prompt))
-        
+
         code = self.llm.get_reply(prompt)
         return code
 
@@ -45,6 +48,6 @@ class Toolify:
         code = self._get_code(instruction)
 
         if safe_mode:
-            return(code)
+            return code
         else:
-            raise NotImplementedError("Unsafe mode not implemented yet.")
+            exec(code)

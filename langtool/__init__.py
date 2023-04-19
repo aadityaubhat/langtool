@@ -5,4 +5,4 @@ from .llms.base import LLM
 from .llms.openai import Openai, Model
 
 
-__all__ = ['Toolify', 'LLM', 'Openai', 'Model']
+__all__ = ["Toolify", "LLM", "Openai", "Model"]

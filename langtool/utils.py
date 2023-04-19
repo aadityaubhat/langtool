@@ -85,4 +85,8 @@ def get_documentation(obj):
     elif inspect.isclass(obj):
         return get_class_documentation(obj)
     else:
-        raise TypeError("Unsupported object type: {}. Expected a class or function object.".format(type(obj)))
+        raise TypeError(
+            "Unsupported object type: {}. Expected a class or function object.".format(
+                type(obj)
+            )
+        )
